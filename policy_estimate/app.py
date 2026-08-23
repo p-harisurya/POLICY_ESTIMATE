@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # ---------------------------------
@@ -18,7 +20,7 @@ st.set_page_config(
 # ---------------------------------
 @st.cache_resource
 def load_model():
-    model = joblib.load("insurance_model.pkl")
+  model = joblib.load(os.path.join(BASE_DIR, "insurance_model.pkl"))
     scaler = joblib.load("scaler.pkl")
 
     return model, scaler
