@@ -163,7 +163,7 @@ if st.button(
 
     st.metric(
         label="Estimated Insurance Cost",
-        value=f"{prediction:,.2f}"
+        value=f"{prediction:,.2f}/month"
     )
 
 
