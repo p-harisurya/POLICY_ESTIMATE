@@ -20,8 +20,8 @@ st.set_page_config(
 # ---------------------------------
 @st.cache_resource
 def load_model():
-model = joblib.load(os.path.join(BASE_DIR, "insurance_model.pkl"))
- scaler = joblib.load("scaler.pkl")
+    model = joblib.load(os.path.join(BASE_DIR, "insurance_model.pkl"))
+    scaler = joblib.load("scaler.pkl")
 
     return model, scaler
 
